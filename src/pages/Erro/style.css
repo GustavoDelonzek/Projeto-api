@@ -1,0 +1,36 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+.container-erro{
+    height: 100vh;
+    background-color: #8095BE;
+    text-align: center;
+    color: #fff;
+}
+
+.aviso{
+    font-size: 5rem;
+    padding: 1.6rem;
+}
+
+.texto-aviso{
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.container-fluid .botao-volta{
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    font-size: 1.8rem;
+    border-radius: 0.7rem;
+    color: #333;
+    background-color: #fff;
+}
+
+.container-fluid .botao-volta:hover {
+    background-color: #dfdddd;
+    color: #fffefe;
+    border-color: #bbb; 
+  }
