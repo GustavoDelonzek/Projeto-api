@@ -6,12 +6,21 @@ import stars from "../../assets/image/undraw_outer_space_re_u9vd.svg"
 
 function Home(){
     const [apodData, setApodData] = useState(null);
-  const [dataEscolhida, setDataEscolhida] = useState(dataAtual());
+  const [dataEscolhida, setDataEscolhida] = useState('2024-02-1'); //Data aleatoria pois a função dataAtual() buga na virada de um dia pro outro. Coloquei uma data aleatoria pq o proposito é realmente o usuario escolher a data que ele quer contanto que seja válida.
   const API_KEY = '6hbSF0dO6LHta3b0ghWtGepdEU9v7CriQwOvQQ52'
-    const navigate = useNavigate();
+  //Função para caso o usuario coloque uma data inválida, isto mandará ele pra página que eu quero
+  const navigate = useNavigate();
+
+  //Para que ao carregar a página funcione
   useEffect(() => {
     buscarDados();
   }, []);
+
+
+  //Adiciona a data escolhida pelo usuário como estado da variavel e o buscar dados pra confirmar, fiz isso de o usuario escolher a data primeiro, ai só depois confirmar a data pra carregar os dados pois a função input date entendia a navegação entre datas como varias confirmações. Entao crie dois passos pra que seja algo usavel.
+  const mudaData = (e) => {
+    setDataEscolhida(e.target.value);
+  };
 
   const buscarDados = () => {
     const apodApi = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${dataEscolhida}`;
@@ -26,12 +35,7 @@ function Home(){
       });
   };
 
-
-
-  const mudaData = (e) => {
-    setDataEscolhida(e.target.value);
-  };
-
+  //Pega a data atual do usuario e converte pro funcionamento da api(não irei usar mais para evitar possiveis erros)
   function dataAtual(){
     const data = new Date();
 
