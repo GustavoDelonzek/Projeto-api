@@ -23,6 +23,7 @@ section .card {
     -webkit-backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.548);
+    padding: 2rem;
 }
 
 .card .card-title,
@@ -181,4 +182,17 @@ input[type="date"]:focus {
         line-height: 1.0;
         padding: 1rem;
     }
+
+    section .card {
+        background: rgba(22, 23, 87, 0.253);
+        box-shadow: 0 8px 32px 0 rgba(36, 42, 138, 0.582);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.548);
+        padding: 0;
+    }
+
+
+  
 }

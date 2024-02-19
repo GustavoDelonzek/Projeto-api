@@ -75,7 +75,7 @@ function Home(){
       <section className="card-limite bg-nuvem p-5">
         <article className="d-flex flex-column align-items-center justify-content-center card-limite">
           {apodData && (
-            <div className=' p-4 m-3 card' >
+            <div className='card' >
           {apodData.media_type === 'image' ? (
             <div className="imagem" style={{backgroundImage: `url(${apodData && apodData.url})`, backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}></div>
           ) : apodData.media_type === 'video' ? (
